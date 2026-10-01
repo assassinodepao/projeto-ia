@@ -6,24 +6,41 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
    {
-    enunciado: "Pergunta1", 
+    enunciado: "O que fazer com o kauan quando ele falta dois dias seguidos?", 
     alternativas: [
-        "Alternativa 1", 
-        "Alternativa 2"
+        {
+            texto: "Nada (vc vai ter o mesmo destino...)",
+            afirmacao: "afirmacao"
+        },
+        {
+            texto:  "Mandar ele Para conversar com o Junior (ALTERNATIVA CORRETA)"
+    ]
+        }
+        
+       
+},
+{
+    enunciado: "o kauan vai reprovar?", 
+    alternativas: [
+        "Sim", 
+        "Claro"
     ]
 },
 {
-    enunciado: "Pergunta1", 
+     enunciado: "Quem descobriu o Brasil?", 
     alternativas: [
-        "Alternativa 1", 
-        "Alternativa 2"
+        "Pedro Àlvares Cabral", 
+        "Pelé"
     ]
 },
-{
-    enunciado: "Pergunta1", 
-    alternativas: [
-        "Alternativa 1", 
-        "Alternativa 2"
-    ]
-}    
 ];
+
+let atual = 0;
+let perguntaAtual;
+
+function mostraPergunta(){
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+
+mostraPergunta();
